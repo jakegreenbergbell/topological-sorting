@@ -1,11 +1,3 @@
-# cs35l
-# assignment 6
-# by jake greenberg-bell
-
-# note:
-# in order to verify strace i ran: strace python3 topo_order_commits.py 2>&1 | grep exec
-# then i verified that none of the outputs are exec() calls which would signify the creation of a subprocess
-
 import os, sys, zlib
 
 class CommitNode:
@@ -293,8 +285,6 @@ def get_all_objects(path):
                     new_commit_node.parents.add(parent)
                 all_object_arrays[commit_hash] = new_commit_node
     return all_object_arrays
-    
-    
 
         
 if __name__ == '__main__':
